@@ -1,0 +1,680 @@
+/* Clears */
+	.clear:before,
+	.clear:after,
+	.entry-content:before,
+	.entry-content:after,
+	.comment-content:before,
+	.comment-content:after,
+	.site-header:before,
+	.site-header:after,
+	.site-content:before,
+	.site-content:after,
+	.site-footer:before,
+	.site-footer:after {
+		display: none;
+	}
+
+/* Site Header */
+	.site-logo {
+		display: none;
+	}
+
+	.site-description {
+		display: block;
+		margin-bottom: 1em;
+		text-align: center;
+		color: #fff;
+	}
+
+	.site-title:not(:empty) + .site-description:not(:empty):before {
+		content: '';
+		margin: 0;
+	}
+
+	.site-header.featured-image {
+		overflow: visible;
+	}
+
+	.site-header.featured-image img.custom-logo {
+		filter: none;
+		-webkit-filter: none;
+	}
+
+	.site-header .site-title a,
+	.site-header.featured-image .site-title a {
+		color: #e0b875;
+		font-size: 0;
+		font-weight: bold;
+	}
+
+	.site-header .site-branding .site-title,
+	.site-header.featured-image .site-branding .site-title {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+	}
+
+	.site-header .site-title a:before,
+	.site-header.featured-image .site-title a:before {
+		content: '';
+		display: flex;
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/01/2019-logo-gold.png');
+		height: 220px;
+		width: 260px;
+		padding: 3em;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.site-header .main-navigation .main-menu > li > a,
+	.site-header .main-navigation .main-menu > li > a+ svg,
+	.site-header .main-navigation .main-menu > li.menu-item-has-children .submenu-expand svg {
+		color: #fff;
+		fill: #fff;
+	}
+
+	.site-header .main-navigation .main-menu > li > a:hover,
+	.site-header .main-navigation .main-menu > li > a:hover + svg,
+	.site-header .main-navigation .main-menu > li.menu-item-has-children:hover .submenu-expand svg {
+		color: #fff;
+		fill: #fff;
+	}
+
+	.site-header.featured-image .main-navigation a:hover,
+	.main-navigation .main-menu > li > a:hover,
+	.main-navigation .main-menu > li > a:hover + svg {
+		color: #fff;
+		opacity: 1;
+	}
+
+	.image-filters-enabled .site-header.featured-image .site-featured-image:before,
+	.image-filters-enabled .site-header.featured-image .site-featured-image:after,
+	.image-filters-enabled .entry .post-thumbnail:before,
+	.image-filters-enabled .entry .post-thumbnail:after {
+		background-color: rgba(28,43,75,.8);
+	}
+
+	.site-header.featured-image .main-navigation .sub-menu a {
+		color: #fff;
+		text-align: left;
+	}
+
+	.home .site-header.featured-image {
+		margin-bottom: 0;
+	}
+
+	.site-header {
+		position: relative;
+		width: 100%;
+	}
+
+	.site-header:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		background: rgba(28,43,75,.8);
+	}
+
+	.site-header:after {
+		background-image: url(https://2019.lancasterpa.wordcamp.org/files/2019/01/DSC_8649-604x270.jpg);
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-size: cover;
+		background-repeat: no-repeat;
+		top: 0;
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
+		z-index: -1;
+		content: '';
+	}
+
+/* Nav Items (includes buttons and links) */
+	.main-navigation {
+		text-align: center;
+	}
+
+	.menu-item-has-children {
+		margin-right: .25em;
+	}
+
+	a,
+	a:visited,
+	.main-navigation .main-menu > li,
+	.main-navigation ul.main-menu > li > a,
+	.post-navigation .post-title,
+	.entry .entry-meta a:hover,
+	.entry .entry-footer a:hover,
+	.entry .entry-content .more-link:hover,
+	.main-navigation .main-menu > li > a + svg,
+	.comment .comment-metadata > a:hover,
+	.comment .comment-metadata .comment-edit-link:hover,
+	#colophon .site-info a:hover,
+	.widget a,
+	.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+	.entry .entry-content > .has-primary-color,
+	.entry .entry-content > [class^="wp-block-"] .has-primary-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
+		color: #e0b875;
+	}
+
+	a:hover,
+	a:active,
+	.post-navigation .nav-links a:hover,
+	.post-navigation .nav-links a:hover .post-title,
+	.author-bio .author-description .author-link:hover,
+	.entry .entry-content > .has-secondary-color,
+	.entry .entry-content > [class^="wp-block-"] .has-secondary-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
+	.comment .comment-author .fn a:hover,
+	.comment-reply-link:hover,
+	.comment-navigation .nav-previous a:hover,
+	.comment-navigation .nav-next a:hover,
+	#cancel-comment-reply-link:hover,
+	.widget a:hover {
+		color: #b5955f;
+	}
+
+	svg {
+		transition: fill 120ms ease-in-out;
+		/* fill: #fff; */
+	}
+
+	.main-navigation .sub-menu,
+	.sticky-post,
+	.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+	.entry .button,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.entry .entry-content > .has-primary-background-color,
+	.entry .entry-content > [class^="wp-block-"].has-primary-background-color,
+	.entry .entry-content > [class^="wp-block-"] .has-primary-background-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color,
+	.entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color,
+	.entry .entry-content .wp-block-file .wp-block-file__button {
+		background-color: #e0b875;
+	}
+
+	.menu-item-has-children {
+		margin: 0;
+	}
+
+	.main-navigation .sub-menu > li > a:hover,
+	.main-navigation .sub-menu > li > a:not(.submenu-expand):hover {
+		background-color: #b5955f;
+	}
+
+	.main-navigation .main-menu > li > a {
+		font-weight: 400;
+		margin-right: 1.5rem;
+	}
+
+	.main-navigation .sub-menu > li > a {
+		font-weight: 400;
+	}
+
+	.main-navigation .sub-menu > li > .menu-item-link-return:hover,
+	.main-navigation .sub-menu > li > .menu-item-link-return:focus {
+		background: #b5955f !important;
+	}
+
+	button.menu-item-link-return {
+		border-radius: 0;
+	}
+
+	/* Buttons and Inputs */
+	.button,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		background-color: #e0b875;
+	}
+
+	.button:hover,
+	button:hover,
+	input[type="button"]:hover,
+	input[type="reset"]:hover,
+	input[type="submit"]:hover {
+		background-color: #b5955f;
+	}
+
+/* Camp CTA Links */
+	.action-wrapper {
+		margin: 0 !important;
+		top: -20px;
+		position: relative;
+	}
+
+	.camp-action-item {
+		display: flex;
+		border: 2px solid #1c2b4b;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 100%;
+		text-align: center;
+		justify-content: center;
+		align-content: center;
+		color: #1c2b4b;
+		margin-top: 0 !important;
+		position: relative;
+		z-index: 9;
+		background: #fff;
+	}
+
+	.camp-action-item a {
+		background: #19284d;
+		line-height: 2.5em;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.camp-action-item.camp:before,
+	.camp-action-item.speak:before,
+	.camp-action-item.sponsor:before,
+	.camp-action-item.ticket:before {
+		content: "";
+		font-size: 2em;
+		line-height: 1em;
+		background-color: #1b2a4c;
+		color: #e1b971;
+		border-radius: 100%;
+		background-size: 50%;
+		margin: .5em;
+		padding: .75em;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.camp-action-item.camp:before {
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/02/editor-help.png');
+	}
+
+	.camp-action-item.speak:before {
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/02/megaphone.png');
+	}
+
+	.camp-action-item.sponsor:before {
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/02/nametag.png');
+	}
+
+	.camp-action-item.ticket:before {
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/02/tickets.png');
+	}
+
+/* Homepage Styles */
+	.home .entry-content {
+		display: flex;
+		flex-basis: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.home .entry-content .intro {
+		flex-basis: 100%;
+		width: 100%;
+		max-width: 890px;
+		background: #fff;
+		border: 10px solid #e0b874;
+		text-align: center;
+		padding: 1em;
+		top: -100px;
+		position: relative;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		z-index: 9;
+		border-style: double;
+		font-size: .9em;
+	}
+
+	.home .entry-content {
+		position: relative;
+		overflow: visible;
+	}
+
+	.home .site-content {
+		overflow: visible;
+	}
+
+	.home .entry .entry-content .wp-block-image.camp-gallery-item {
+		max-width: 50%;
+	}
+
+	.home .entry .entry-content .wp-block-image.camp-gallery-item.full {
+		max-width: 100%;
+	}
+
+	.home .entry .entry-content .wp-block-image.camp-gallery-item.full img {
+		filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+	}
+
+	.home .entry .entry-content .wp-block-image.camp-gallery-item.full:before {
+		content: '';
+		width: 100vw;
+		height: 100%;
+		background-color: rgba(28,43,75,.8);
+		display: block;
+		position: absolute;
+		z-index: 9;
+	}
+
+	.home h1.entry-title {
+		visibility: hidden;
+		opacity: 0;
+		font-size: 0;
+	}
+
+	.home .entry .entry-content .wp-block-image.camp-gallery-item.full figcaption {
+		max-width: calc(125% + 150px);
+		width: 100vw;
+		position: relative;
+		z-index: 9;
+		font-size: 5vw !important;
+		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+		height: auto;
+		background: #e2ba6b;
+		color: #17264f;
+		padding: 1em;
+	}
+
+/* Colophon */
+	#colophon .site-info {
+		background: #e1b971;
+		margin: 0;
+		padding: calc(3 * 1rem) calc(10% + 60px);
+		text-align: center;
+		color: #19284d;
+		position: relative;
+	}
+
+	#colophon .site-info:before {
+		content: '';
+		background-image: url('https://2019.lancasterpa.wordcamp.org/files/2019/02/wordpress.png');
+		position: absolute;
+		top: -12px;
+		background-color: #e2ba6b;
+		color: #19284d;
+		font-size: 3em;
+		line-height: 1;
+		border-radius: 100%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 50px;
+		height: 50px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#colophon .site-info a:hover {
+		color: #333333;
+	}
+
+	#colophon .widget-column .widget.wcb_widget_sponsors {
+		display: flex;
+		flex-basis: 100%;
+		margin-right: 0;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#colophon .widget-column .widget.wcb_widget_sponsors .widget-title {
+		flex-basis: 100%;
+		display: block;
+		width: 100%;
+	}
+
+.speak-blurb {
+	display: flex;
+	flex-basis: 100%;
+	justify-content: center;
+	max-width: 100% !important;
+}
+
+/* Sponsor Styles */
+	.sponsor-level {
+		flex-basis: 100%;
+		justify-content: center;
+		justify-items: center;
+		flex-wrap: wrap;
+		display: block;
+		border: 2px solid #1b294d;
+		margin-bottom: 1em;
+	}
+
+	.sponsor-level .sponsor-level-title {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 2em;
+		background: #19274e;
+		color: #e1b971;
+		margin: 0;
+		padding: 1rem 0;
+	}
+
+	.sponsor-level .sponsor-logo {
+		width: 100%;
+		padding: 1em;
+	}
+
+	.wcb_widget_sponsors .sponsor-logo img {
+		max-width: 100%;
+		height: auto;
+		max-height: 150px;
+		width: auto;
+		margin: 0 auto;
+		display: block;
+	}
+
+	a.sponsor-logo {
+		cursor: pointer;
+		-webkit-transition: all .5s ease;
+		transition: all .5s ease;
+	}
+
+	a.sponsor-logo:hover {
+		opacity: .5;
+	}
+
+	.wcb_widget_sponsors .sponsor-logo img {
+		max-width: 50% !important;
+	}
+
+/* Post Nav */
+	.post-navigation .nav-links {
+		max-width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.entry .entry-footer {
+		display: none;
+	}
+
+	nav.navigation.post-navigation {
+		background: #1b294d;
+		padding: 1em;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.post-navigation .nav-links a .meta-nav:before,
+	.post-navigation .nav-links a .meta-nav:after {
+		content: '';
+		width: 0;
+	}
+
+	.post-navigation .nav-links a .meta-nav {
+		color: #fff;
+	}
+
+	@media only screen and (min-width: 1168px) {
+		.nav-previous {
+			border-right: 1px solid #fff;
+		}
+	}
+
+/* EU Cookie Law Styles */
+	.widget_eu_cookie_law_widget #eu-cookie-law {
+		border: 0;
+		background: #1c2b4c;
+		color: #DCB06A;
+		font-weight: bold;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.widget_eu_cookie_law_widget #eu-cookie-law .accept {
+		font-size: 1em;
+		padding: 10px 12px;
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	#eu-cookie-law form {
+		margin-bottom: 0;
+		order: 1;
+		padding-top: 1em;
+		width: 100%;
+	}
+
+	#eu-cookie-law form input,
+	#eu-cookie-law input:focus,
+	#eu-cookie-law input:hover {
+		background: #e1b971;
+		border: 0;
+		border-radius: 0;
+	}
+
+	#eu-cookie-law input:focus,
+	#eu-cookie-law input:hover {
+		background: #b5955f;
+	}
+
+/* Speaker Table */
+	.wcpt-col-time {
+		min-width: 6em;
+	}
+
+	.wcpt-time {
+		text-align: right;
+	}
+
+	.wcb-session-cell-content .wcpt-session-speakers::before {
+		content: "by ";
+	}
+
+	.wcb-session-cell-content {
+		word-break: break-word;
+	}
+
+	#session-speaker-names, #speaker-session-names {
+		margin-left: 0;
+		margin: 32px auto;
+		padding-left: 0;
+	}
+
+/* Media Queries */
+	@media only screen and  (min-width: 400px) {
+		.home .entry-content .intro {
+			top: -100px;
+			padding: 2em;
+			font-size: 1em;
+		}
+	}
+
+	@media only screen and ( min-width: 600px ) {
+		.entry .entry-content .wp-block-columns {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.sponsor-level {
+			flex-basis: 49%;
+		}
+
+		.wp-block-column {
+			flex-basis: 49%;
+			flex-grow: 0;
+		}
+		
+		.wp-block-column {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.site-header.featured-image {
+			min-height: 75vh;
+			margin-bottom: 3rem;
+		}
+		
+		.entry .entry-content > *, .entry .entry-summary > * {
+			margin: 32px auto;
+		}
+
+		.main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu,
+		.main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu,
+		.main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu {
+			text-align-last: left;
+		}
+	}
+
+	@media only screen and  (min-width: 776px) {
+		.home .entry-content .intro {
+			font-size: 1.2em;
+		}
+	}
+
+	@media only screen and  (min-width: 950px) {
+		.camp-action-item {
+			margin-bottom: 0 !important;
+			min-height: 200px;
+			font-size: 1.2em;
+		}
+	}
+
+	@media only screen and  (min-width: 800px) {
+		.home .entry .entry-content .wp-block-image.camp-gallery-item.full figcaption {
+			max-width: calc(125% + 150px);
+			margin-left: auto;
+			margin-right: auto;
+			position: absolute;
+			font-size: 3vw !important;
+			color: #fff;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0 20%;
+			background: transparent;
+		}
+	}
+
+	@media only screen and  (min-width: 1200px) {
+		.home .entry .entry-content .wp-block-image.camp-gallery-item.full figcaption {
+			font-size: 2vw !important;
+		}
+	}
+
+	@media only screen and  (min-width: 1600px) {
+		.wp-block-column {
+			flex-basis: 24%;
+		}
+	}
