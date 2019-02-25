@@ -32,7 +32,7 @@
 	}
 
 	.site-header.featured-image {
-		overflow: visible;
+		overflow: hidden;
 	}
 
 	.site-header.featured-image img.custom-logo {
