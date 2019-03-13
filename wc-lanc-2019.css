@@ -591,6 +591,21 @@
 		padding-left: 0;
 	}
 
+/* Tickets Table */
+	th.tix-column-price{
+		min-width: 5em;
+	}
+	th.tix-column-remaining,
+	td.tix-column-remaining{
+		display: none;
+	}
+	th.tix-column-quantity{
+		min-width: 6em;
+	}
+	td.tix-column-quantity{
+		text-align: center;
+	}
+
 /* Media Queries */
 	@media only screen and  (min-width: 400px) {
 		.home .entry-content .intro {
