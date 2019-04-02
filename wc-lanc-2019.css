@@ -108,6 +108,7 @@
 	.site-header {
 		position: relative;
 		width: 100%;
+		overflow: visible;
 	}
 
 	.site-header:before {
